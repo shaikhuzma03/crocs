@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Crocodile Fact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Crocodile Fact</h1>
+        <p id="fact"></p>
+        <button id="factButton">Get a Random Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Crocodiles have existed for over 200 million years, making them one of the oldest living species on Earth.",
+            "Crocodiles are ectothermic (cold-blooded), meaning they rely on external sources to regulate their body temperature.",
+            "They have one of the strongest bite forces in the animal kingdom, with some species capable of exerting over 3,700 pounds of pressure per square inch.",
+            "Crocodiles are well-adapted to aquatic life, with webbed feet, a streamlined body, and eyes and nostrils positioned on top of their heads for easy breathing while submerged.",
+            "They are carnivorous and primarily feed on fish, birds, and mammals. Some larger species can take down large prey, including wildebeests and buffalo.",
+            "Crocodiles communicate using a variety of vocalizations, including hissing, growling, and even bellowing, especially during mating season.",
+            "Unlike many reptiles, female crocodiles exhibit parental care, guarding their nests and helping hatchlings reach the water.",
+            "There are 15 recognized species of true crocodiles, including the Nile crocodile, saltwater crocodile, and American crocodile.",
+            "Crocodiles can live for several decades, with some species known to live over 70 years in the wild.",
+            "They inhabit a variety of environments, including rivers, lakes, wetlands, and even brackish waters, and are found in tropical and subtropical regions around the world."
+        ];
+
+        document.getElementById('factButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
